@@ -6,9 +6,11 @@ public class Main {
 
         String[] students = new String[10];
 
-        try (Scanner scanner = new Scanner(System.in)){
+        // open the scanner and each round of loop ask for the input and add it to array
+        // @ corresponding index
+        try (Scanner scanner = new Scanner(System.in)) {
 
-            for(int i = 0; i < 10; i++){
+            for (int i = 0; i < students.length; i++) {
                 System.out.println("Enter student's name:");
                 String name = scanner.nextLine();
                 students[i] = name;
@@ -17,15 +19,13 @@ public class Main {
 
         }
 
-
         System.out.println("You have entered the following names:");
 
-        for(String student : students){
+        // print out the all the students
+        for (String student : students) {
 
             System.out.println(student);
-
         }
-
 
     }
 }
